@@ -20,11 +20,11 @@ jobs:
       run: |
         curl -sL "https://services.gradle.org/distributions/gradle-8.5-bin.zip" -o /tmp/gradle.zip
         unzip -q /tmp/gradle.zip -d /tmp
-        WRAPPER_JAR=$(find /tmp/gradle-8.5 -name "gradle-wrapper*.jar" | head -1)
-        echo "Found wrapper jar: $WRAPPER_JAR"
-        cp "$WRAPPER_JAR" gradle/wrapper/gradle-wrapper.jar
-        chmod +x gradlew
+        /tmp/gradle-8.5/bin/gradle wrapper --gradle-version 8.5
         rm -rf /tmp/gradle*
+
+    - name: Accept Android SDK License
+      run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1 || true
 
     - name: Setup Gradle Cache
       uses: gradle/actions/setup-gradle@v3
