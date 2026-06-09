@@ -18,11 +18,9 @@ jobs:
 
     - name: Setup Gradle Wrapper
       run: |
-        mkdir -p gradle/wrapper
         curl -sL "https://services.gradle.org/distributions/gradle-8.5-bin.zip" -o /tmp/gradle.zip
-        unzip -q -o /tmp/gradle.zip "gradle-8.5/lib/gradle-wrapper-*.jar" -d /tmp
-        cp /tmp/gradle-8.5/lib/gradle-wrapper-8.5.jar gradle/wrapper/gradle-wrapper.jar
-        chmod +x gradlew
+        unzip -q /tmp/gradle.zip -d /tmp
+        /tmp/gradle-8.5/bin/gradle wrapper --gradle-version 8.5
         rm -rf /tmp/gradle*
 
     - name: Setup Gradle Cache
