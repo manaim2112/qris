@@ -20,14 +20,17 @@ jobs:
       run: |
         curl -sL "https://services.gradle.org/distributions/gradle-8.5-bin.zip" -o /tmp/gradle.zip
         unzip -q /tmp/gradle.zip -d /tmp
-        /tmp/gradle-8.5/bin/gradle wrapper --gradle-version 8.5
+        WRAPPER_JAR=$(find /tmp/gradle-8.5 -name "gradle-wrapper*.jar" | head -1)
+        echo "Found wrapper jar: $WRAPPER_JAR"
+        cp "$WRAPPER_JAR" gradle/wrapper/gradle-wrapper.jar
+        chmod +x gradlew
         rm -rf /tmp/gradle*
 
     - name: Setup Gradle Cache
       uses: gradle/actions/setup-gradle@v3
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --no-daemon
+      run: ./gradlew assembleDebug --stacktrace --no-daemon
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
