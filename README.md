@@ -120,4 +120,7 @@ git push origin main
 
 # Download APK dari GitHub Actions → Artifacts
 # Install di Android 7.0+ (min SDK 24 / Nougat)
+
+## Catatan Play Protect
+Google Play Protect mungkin memblokir installasi karena aplikasi ini menggunakan **NotificationListenerService** (dianggap sensitif). Ini normal untuk aplikasi tipe ini. Cukup tap **"Install anyway"** atau nonaktifkan Play Protect sementara di Settings → Google → Play Protect.
 ```
