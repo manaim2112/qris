@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QRIS Listener</string>
+    <string name="splash_subtitle">Payment Notification Monitor</string>
+    <string name="login_title">Masuk ke Akun</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Kata Sandi</string>
+    <string name="login_button">Masuk</string>
+    <string name="login_loading">Memproses…</string>
+    <string name="login_error">Email atau kata sandi salah</string>
+    <string name="login_network_error">Gagal terhubung ke server</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_requirements">Persyaratan Sistem</string>
+    <string name="req_network">Koneksi Internet</string>
+    <string name="req_notification">Izin Akses Notifikasi</string>
+    <string name="req_login">Session Login</string>
+    <string name="req_listener">Layanan Listener</string>
+    <string name="req_battery">Optimasi Baterai</string>
+    <string name="req_battery_desc">Nonaktifkan agar listener tetap jalan saat HP tidur</string>
+    <string name="status_aman">AMAN</string>
+    <string name="status_tidak_aman">TIDAK AMAN</string>
+    <string name="logout">Keluar</string>
+    <string name="logout_confirm">Yakin ingin keluar?</string>
+    <string name="tap_to_set">Ketuk untuk atur</string>
+    <string name="info_all_ok">Semua persyaratan terpenuhi. Aplikasi siap memantau notifikasi dari GoPay &amp; Mandiri Merchant.</string>
+    <string name="info_battery_note">Pada HP Xiaomi/OPPO/vivo: buka Settings → Apps → QRIS Listener → Battery → pilih Tanpa Batasan / Unrestricted agar tidak dimatikan saat deep sleep.</string>
+</resources>
